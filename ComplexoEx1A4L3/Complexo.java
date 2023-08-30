@@ -25,34 +25,53 @@ public class Complexo {
 
    }
 
-   public boolean equal(Complexo outroComplexo){
+   public boolean eIqual(Complexo outroComplexo){
     return(outroComplexo.real==this.real && outroComplexo.imaginaria==this.imaginaria);//retorna 1 se verdadeiro
 
    }
 
-   public void soma(Complexo outroComplexo){
-    this.real = real + outroComplexo.real;
-    this.imaginaria = imaginaria + outroComplexo.imaginaria;
+   public Complexo soma(Complexo outroComplexo){
+    Complexo novo= new Complexo();
+
+    novo.real = this.real + outroComplexo.real;
+    novo.imaginaria = this.imaginaria + outroComplexo.imaginaria;
+
+    novo.inicializaNumero(novo.real, novo.imaginaria);
+    return novo;
 
    }
 
-   public void subtrai(Complexo outroComplexo){
-    this.real = real - outroComplexo.real;
-    this.imaginaria = imaginaria - outroComplexo.imaginaria;
+   public Complexo subtrai(Complexo outroComplexo){
+    Complexo novo= new Complexo(); 
+
+    novo.real = this.real - outroComplexo.real;
+    novo.imaginaria = this.imaginaria - outroComplexo.imaginaria;
+
+    novo.inicializaNumero(novo.real, novo.imaginaria);
+    return novo;
 
    }
 
-   public void multiplica(Complexo outroComplexo){
-    this.real= ( real * outroComplexo.real - imaginaria * outroComplexo.imaginaria);
-    this.imaginaria= ( real * outroComplexo.imaginaria + imaginaria * outroComplexo.real);
+   public Complexo multiplica(Complexo outroComplexo){
+    Complexo novo= new Complexo(); 
+
+    novo.real= (this.real * outroComplexo.real - imaginaria * outroComplexo.imaginaria);
+    novo.imaginaria= (this.real * outroComplexo.imaginaria + imaginaria * outroComplexo.real);
+
+    novo.inicializaNumero(novo.real, novo.imaginaria);
+    return novo;
 
    }
 
-   public void divide(Complexo outroComplexo){
+   public Complexo divide(Complexo outroComplexo){
+    Complexo novo= new Complexo(); 
 
-    this.real = (real*outroComplexo.real + imaginaria*outroComplexo.imaginaria) / (Math.pow(outroComplexo.real, 2)+Math.pow(outroComplexo.imaginaria,2));
+    novo.real = (this.real*outroComplexo.real + this.imaginaria*outroComplexo.imaginaria) / (Math.pow(outroComplexo.real, 2)+Math.pow(outroComplexo.imaginaria,2));
 
-    this.imaginaria =(imaginaria*outroComplexo.real - real*outroComplexo.imaginaria) / (Math.pow(outroComplexo.real, 2)+Math.pow(outroComplexo.imaginaria,2));
+    novo.imaginaria =(this.imaginaria*outroComplexo.real - this.real*outroComplexo.imaginaria) / (Math.pow(outroComplexo.real, 2)+Math.pow(outroComplexo.imaginaria,2));
+
+    novo.inicializaNumero(novo.real, novo.imaginaria);
+    return novo;
 
    }
     
