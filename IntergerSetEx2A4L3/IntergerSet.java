@@ -57,16 +57,17 @@ public class IntergerSet {
 
         for(i=0; i<101; i++){
             if(grupo[i]==true){
-                presente = i + " ";
+                presente = presente + i + " ";
                 cont++;//vai contar quantas vezes teve um verdadeiro, se n tiver é conjunto vazio
+             }
+             else{
+                presente = presente + "--" + " ";
              }
         }
         if (cont==0){
             return "--";
         }
-        else{
-            return presente; 
-        }
+        return presente;
     
     }
 

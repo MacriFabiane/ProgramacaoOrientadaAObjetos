@@ -9,6 +9,7 @@ public class Segundo {
         s= teclado.nextLine(); //ou coloca 2 next line ou só o next acima(p uma palavra só)
         System.out.println ( "inteiro:" + i + ", real:" + r );
         System.out.println ( "Frase : " + s );
+        teclado.close();
     }
     
 }
