@@ -50,5 +50,37 @@ public class IntergerSet {
             System.out.println("Valor fora do intervalo(0 a 100)");
     }
 
-    public void toSetString (IntergerSet )
+    public String toSetString (){
+        String presente = new String();
+        int i=0;
+        int cont=0;
+
+        for(i=0; i<101; i++){
+            if(grupo[i]==true){
+                presente = i + " ";
+                cont++;//vai contar quantas vezes teve um verdadeiro, se n tiver é conjunto vazio
+             }
+        }
+        if (cont==0){
+            return "--";
+        }
+        else{
+            return presente; 
+        }
+    
+    }
+
+    public Boolean isEqualTo (IntergerSet grupo2){
+        int i=0;
+
+        for(i=0;i<101; i++){
+            if(grupo2.grupo[i]!=grupo[i]){
+                return false;//se tiver 1 elemento difernte já acaba
+            }
+        }
+        return true;//caso n tenha encontrado nada diferente nos conjuntos acaba
+    }
+
 }
+
+
