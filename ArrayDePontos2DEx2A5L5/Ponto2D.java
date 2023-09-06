@@ -47,4 +47,4 @@ public class Ponto2D {
          return resultado;
       } // fim do método toString
  
-}//end Ponto2D
+}//end Ponto2Dl
