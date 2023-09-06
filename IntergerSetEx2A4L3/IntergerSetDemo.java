@@ -27,13 +27,47 @@ public class IntergerSetDemo {
                 grupo2.insertElement(i);
 
         }while(i!=-1);
-        scanner.close();//fechar o scanner
+        
 
         //TESTE UNION
+        System.out.println("União: ");
         grupo3=grupo1.union(grupo2);
         System.out.println(grupo3.toSetString());//transformar em strig antes de imprimir
-   
-        
+
+        //TESTE INRTESECTION
+        System.out.println("Intersecção: ");
+        grupo3=grupo1.intersection(grupo2);
+        System.out.println(grupo3.toSetString());
+
+        //TESTE DELETE
+        System.out.println("Insira os elementos que deseja deletar do conjunto 1, (-1 para parar ou se não quiser deletar nenhum): ");
+        do{
+            i=scanner.nextInt();
+            if(i>=0 && i<101 && i!=-1){
+            grupo1.deleteElement(i);
+            }
+
+        }while(i!=-1);
+        System.out.println(grupo1.toSetString());
+
+        System.out.println("Insira os elementos que deseja deletar do conjunto 2, (-1 para parar ou se não quiser deletar nenhum): ");
+        do{
+            i=scanner.nextInt();
+            if(i>=0 && i<101 && i!=-1){
+            grupo2.deleteElement(i);
+            }
+
+        }while(i!=-1);
+        System.out.println(grupo2.toSetString());
+
+        //TESTE ISEQUALTO"
+        System.out.println("Teste de igualdade de conjuntos: ");
+        System.out.println(grupo1.isEqualTo(grupo2));
+
+
+        scanner.close();//fechar o scanner
     }
+    
+
     
 }
