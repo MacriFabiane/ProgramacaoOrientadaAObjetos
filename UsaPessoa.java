@@ -1,3 +1,5 @@
+import Aula6.Pessoa;
+
 public class UsaPessoa{
 
 public static void main(String[] args) {

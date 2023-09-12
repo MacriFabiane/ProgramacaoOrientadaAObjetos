@@ -1,3 +1,4 @@
+package Aula6;
 //Gravacao e Leitura de Objeto em arquivo
 import java.io.File;
 import java.io.FileInputStream;
