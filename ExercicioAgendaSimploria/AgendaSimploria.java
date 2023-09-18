@@ -33,7 +33,7 @@ public class AgendaSimploria {
                     System.out.println("Insira o nome da pessoa: ");
                     nome=teclado.nextLine();
 
-                    System.out.println("Insira o cpf da pessoa: ");
+                    System.out.println("Insira o cpf da pessoa:");
                     cpf=teclado.nextLine();
 
                     agenda[cont]= new Pessoa(nome, cpf);
