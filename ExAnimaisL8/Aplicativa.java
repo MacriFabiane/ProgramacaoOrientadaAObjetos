@@ -9,26 +9,45 @@ public class Aplicativa {
     do {
         Random x= new Random();
         age=x.nextInt(3)+2;//2 a 5
-        tipo=x.nextInt(3)+1;//1 a 3
+        tipo=x.nextInt(6)+1;//1 a 3
 
         if(tipo==1){
-            Mamiferos mamiferoGenerico =new Mamiferos(age, "Mamífero Genérico Aleatório");
+            Cachorro poodle =new Cachorro(age, "Poodle");
 
-            System.out.println(mamiferoGenerico.toString());
-            mamiferoGenerico.emitirSom();
+            System.out.println(poodle.toString());
+            poodle.emitirSom();
 
         }
-        else if(tipo==2){
-            Aves aveGenerica=new Aves(age, "Ave Genérica Aleatória");
+         else if(tipo==2){
+            Gato siames =new Gato(age, "Siamês");
 
-            System.out.println(aveGenerica.toString());
-            aveGenerica.emitirSom();            
+            System.out.println(siames.toString());
+            siames.emitirSom();
+
         }
         else if(tipo==3){
-            Peixes peixeGenerico = new Peixes(age, "Peixe Genérico Aleatório");
+            Arara arara=new Arara(age, "Arara");
 
-            System.out.println(peixeGenerico.toString());
-            peixeGenerico.emitirSom();
+            System.out.println(arara.toString());
+            arara.emitirSom();            
+        }
+        else if(tipo==4){
+            Bentevi bentevi=new Bentevi(age, "Bem-te-vi");
+
+            System.out.println(bentevi.toString());
+            bentevi.emitirSom();            
+        }
+        else if(tipo==5){
+            Bagre bagre = new Bagre(age, "Bagre");
+
+            System.out.println(bagre.toString());
+            bagre.emitirSom();
+        }
+        else if(tipo==6){
+           Tilapia tilapia = new Tilapia(age, "Tilapia");
+
+            System.out.println(tilapia.toString());
+            tilapia.emitirSom();
         }
         cont++;
     } while (cont<=10);
