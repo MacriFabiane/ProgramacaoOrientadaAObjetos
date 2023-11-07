@@ -7,7 +7,9 @@ public class Principal {
         Aluno a1 = new Aluno("Macri", 19, 2456591, "Computação");
 
         System.out.println(p1.getNome() + "\n"+ p1.getInfos());
-        System.out.println(a1.getNome() +"\n" + a1.getInfos());
+        System.out.println(a1.getNome() +"\n" + a1.getInfos());//oo11oooo 
+    //oi me lido
+       System.out.println("bah");
     }
     
 }
